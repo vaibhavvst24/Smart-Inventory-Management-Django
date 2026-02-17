@@ -1,0 +1,126 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Background */
+body {
+    min-height: 100vh;
+    background: #AED6F1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Wrapper */
+.page-wrapper {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Card */
+.form-container {
+    max-width: 450px;
+    margin: auto;
+    background: #D4E6F1;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    transition: 0.4s ease;
+}
+
+/* Hover effect 0.4s */
+.form-container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* Header */
+.form-header h2 {
+    color: #3f51b5;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.form-header p {
+    font-size: 14px;
+    color: darkslategray;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Form fields */
+.supplier-form p {
+    margin-bottom: 12px;
+}
+
+.supplier-form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: black;
+    text-align: center;
+}
+
+.supplier-form input,
+.supplier-form select,
+.supplier-form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid black;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+/* Focus */
+.supplier-form input:focus,
+.supplier-form select:focus,
+.supplier-form textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+/* Button */
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Back link */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #3f51b5;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .form-container {
+        padding: 25px;
+    }
+}

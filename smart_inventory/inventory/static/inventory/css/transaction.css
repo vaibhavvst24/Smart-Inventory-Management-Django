@@ -1,0 +1,160 @@
+/* ============================= */
+/* GLOBAL RESET */
+/* ============================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ============================= */
+/* PAGE BACKGROUND */
+/* ============================= */
+
+body {
+    min-height: 100vh;
+    background: #aed6f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ============================= */
+/* WRAPPER */
+/* ============================= */
+
+.page-wrapper {
+    width: 100%;
+    padding: 20px;
+}
+
+/* ============================= */
+/* FORM CARD */
+/* ============================= */
+
+.form-container {
+    max-width: 520px;
+    margin: auto;
+    background: #d4e6f1;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: 0.4s ease;
+}
+
+/* Smooth 0.4s hover */
+.form-container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.form-header h2 {
+    font-size: 22px;
+    margin-bottom: 6px;
+    color: #333;
+    text-align: center;
+}
+
+.form-header p {
+    font-size: 14px;
+    color: darkslategray;
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+/* ============================= */
+/* FORM STRUCTURE */
+/* ============================= */
+
+form p {
+    margin-bottom: 18px;
+}
+
+form label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: black;
+    font-weight: 500;
+    text-align: center;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 11px 14px;
+    border-radius: 8px;
+    border: 1px solid black;
+    font-size: 14px;
+    transition: 0.3s ease;
+    background: #fafafa;
+}
+
+/* Focus effect */
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================= */
+/* BACK LINK */
+/* ============================= */
+
+.back-link {
+    display: inline-block;
+    margin-top: 22px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #3f51b5;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.back-link:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+/* ============================= */
+/* RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 600px) {
+    .form-container {
+        padding: 28px;
+    }
+}

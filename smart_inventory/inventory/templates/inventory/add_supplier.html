@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Supplier | Smart Inventory</title>
+    <link rel="stylesheet" href="{% static 'inventory/css/supplier.css' %}">
+</head>
+<body>
+
+<div class="page-wrapper">
+
+    <div class="form-container">
+
+        <div class="form-header">
+            <h2>Add New Supplier</h2>
+            <p>Enter supplier details below</p>
+        </div>
+
+        <form method="POST" class="supplier-form">
+            {% csrf_token %}
+
+            <div class="form-fields">
+                {{ form.as_p }}
+            </div>
+
+            <button type="submit" class="btn-primary">
+                Add Supplier
+            </button>
+        </form>
+
+        <a href="/" class="back-link">← Back to Dashboard</a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

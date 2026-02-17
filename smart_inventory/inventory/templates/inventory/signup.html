@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up | Smart Inventory</title>
+    <link rel="stylesheet" href="{% static 'inventory/css/signup.css' %}">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="signup-wrapper">
+
+    <!-- LEFT IMAGE -->
+    <div class="signup-image">
+        <img src="{% static 'inventory/css/customer.png' %}" alt="Signup Illustration">
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="signup-box">
+
+        <h2>Create Account</h2>
+        <p class="subtitle">Register to manage your inventory</p>
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="input-group">
+                <i class="fa fa-user"></i>
+                <input type="text" name="username" placeholder="Username" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fa fa-envelope"></i>
+                <input type="email" name="email" placeholder="Email" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fa fa-lock"></i>
+                <input type="password" name="password1" placeholder="Password" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fa fa-lock"></i>
+                <input type="password" name="password2" placeholder="Confirm Password" required>
+            </div>
+
+            <button type="submit">Sign Up</button>
+
+            <div class="login-link">
+                Already have an account?
+                <a href="/login/">Login</a>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Inventory System</title>
+    <link rel="stylesheet" href="{% static 'inventory/css/style.css' %}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <h2>SMART INVENTORY SYSTEM</h2>
+
+    <div class="nav-links">
+        <a href="/">Dashboard</a>
+        <a href="/add-product/">Add Product</a>
+        <a href="/add-supplier/">Add Supplier</a>
+        <a href="/add-transaction/">Add Transaction</a>
+        <a href="/export-products/">Export Products</a>
+        <a href="/logout/">Logout</a>
+    </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main">
+
+    <!-- LEFT: DASHBOARD CONTENT -->
+    <div class="container">
+
+        <h2>Dashboard</h2>
+
+        <div class="card">
+            <h3>Total Products</h3>
+            <p>{{ total_products }}</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Suppliers</h3>
+            <p>{{ total_suppliers }}</p>
+        </div>
+
+        <div class="card">
+            <h3>Low Stock</h3>
+            <p>{{ low_stock_products }}</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Value</h3>
+            <p>₹{{ total_inventory_value }}</p>
+        </div>
+
+        <h2>Recent Transactions</h2>
+
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Type</th>
+                <th>Quantity</th>
+                <th>Date</th>
+            </tr>
+
+            {% for transaction in recent_transactions %}
+            <tr>
+                <td>{{ transaction.product.name }}</td>
+                <td>{{ transaction.transaction_type }}</td>
+                <td>{{ transaction.quantity }}</td>
+                <td>{{ transaction.date }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4">No recent transactions</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+
+    <!-- RIGHT: IMAGE -->
+    <div class="image-section"></div>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    Developed by <span>Vaibhav</span> | Smart Inventory Management System
+</footer>
+
+</body>
+</html>
